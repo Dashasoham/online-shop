@@ -31,13 +31,13 @@ const Products = ({ apiData }) => {
       cartId: idItem,
     };
     dispatch(addToCart(productWithId));
-
-    console.log(idItem);
+    // console.log(idItem);
+    console.log(productWithId.cartId);
+    return productWithId.cartId;
   };
 
-  const removeItem = (cartId) => {
+  const removeItem = (product) => {
     console.log(idItem);
-    console.log(cartId);
     dispatch(removeFromCart(idItem));
   };
   const numberOfItems = cartItems.length;
